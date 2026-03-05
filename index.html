@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD - Astronomy Picture of the Day</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="container">
+        <header>
+            <h1>NASA APOD</h1>
+            <p>Descubra o cosmos, uma imagem por dia.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <label for="date-picker">Escolha uma data:</label>
+                <input type="date" id="date-picker" max="">
+                <button id="load-btn">Carregar Imagem</button>
+            </div>
+
+            <div id="loading" class="hidden">Carregando o universo...</div>
+
+            <div id="content" class="content-card hidden">
+                <h2 id="apod-title"></h2>
+                <p id="apod-date" class="date"></p>
+
+                <div class="media-container" id="media-container">
+                    <!-- Image or Video will be injected here -->
+                </div>
+
+                <div class="definition">
+                    <p id="apod-explanation"></p>
+                </div>
+            </div>
+
+            <div id="error-message" class="error hidden"></div>
+        </main>
+
+        <footer>
+            <p>Desenvolvido consumindo a <a href="https://api.nasa.gov/" target="_blank">NASA API</a></p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
